@@ -1,0 +1,122 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  color: #ff6f61;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+/* Message */
+.message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Balloons */
+.balloons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #ff6f61;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+}
+
+.balloon::after {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background: #aaa;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balloon.red {
+  background-color: #f56991;
+  animation-delay: 0s;
+}
+
+.balloon.blue {
+  background-color: #61a9ff;
+  animation-delay: 1s;
+}
+
+.balloon.yellow {
+  background-color: #ffde59;
+  animation-delay: 2s;
+}
+
+/* Floating Balloons Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Button */
+.btn {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Surprise Message */
+.surprise {
+  font-size: 1.8rem;
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

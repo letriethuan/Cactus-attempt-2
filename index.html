@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🎉 Happy Birthday CAT TUONG (AKA FOOD GIRL :>> )! 🎂</h1>
+    <p class="message">Wishing you a day filled with love, foods , and all your favorite things!</p>
+    <div class="balloons">
+      <div class="balloon red"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon yellow"></div>
+    </div>
+    <p class="cta">Click the button below for a surprise!</p>
+    <button id="surpriseButton" class="btn">🎁 Show Surprise</button>
+    <p id="surpriseMessage" class="surprise" style="display: none;">You are my amazing big sis! Keep shining! 🌟</p>
+  </div>
+
+  <script>
+    document.getElementById('surpriseButton').addEventListener('click', function () {
+      const message = document.getElementById('surpriseMessage');
+      message.style.display = 'block';
+      this.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
